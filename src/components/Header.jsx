@@ -1,9 +1,27 @@
 import React from 'react'
 import Logo from '../assets/cloudage_logo.png'
+import styled, { css } from 'styled-components'
+
 
 const Header = () => {
+    const Wrapper = styled.section`
+
+    .header_section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            height: 100px;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    `
+
   return (
-    <>
+    <Wrapper>
         <div className="header_section">
             <div className='logo'>
                 <img src={Logo} />
@@ -20,7 +38,7 @@ const Header = () => {
                 <button>Apply Now</button>
             </div>
         </div>
-    </>
+    </Wrapper>
   )
 }
 
